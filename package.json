@@ -1,0 +1,22 @@
+{
+  "name": "static-server",
+  "version": "1.0.0",
+  "description": "Intelvideo static server",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Intelvideo-IT-Committee/static-server.git"
+  },
+  "author": "andresokol",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Intelvideo-IT-Committee/static-server/issues"
+  },
+  "homepage": "https://github.com/Intelvideo-IT-Committee/static-server#readme",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
+}
