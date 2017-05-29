@@ -10,6 +10,8 @@ $(function () {
         dataType: 'json',
         done: function (e, data) {
             console.log("done");
+            console.log(data);
+            $('#test').append("<img src='" + data.result.url + "'>");
         },
         progressall: function (e, data) {
             var progress = parseInt(data.loaded / data.total * 100, 10);
@@ -18,3 +20,4 @@ $(function () {
     });
 });
 </script>
+<div id="test"></div>
