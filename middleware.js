@@ -1,6 +1,7 @@
 var express = require('express'),
     router = require('./route'),
-    ejs = require('ejs-mate');
+    ejs = require('ejs-mate'),
+    multer = require('multer');
 
 var configureServer = function (app) {
     app.set('port', process.env.PORT);
