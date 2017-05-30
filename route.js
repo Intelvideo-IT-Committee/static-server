@@ -22,5 +22,5 @@ var uploadfunc = (req, res) => {
 module.exports = function(app) {
     app.get("/", (req, res) => {res.render("main");});
 
-    app.post("/upload", upload.single('pic'), uploadfunc);
+    app.post("/upload/", upload.single('pic'), uploadfunc);
 }

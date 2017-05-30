@@ -15,6 +15,22 @@ var configureServer = function (app) {
     // setting up static files
     app.use('/st', express.static(process.env.STATIC_DIR));
 
+    // disabling CORS
+    app.use("*", (req, res, next) => {
+        res.header("Access-Control-Allow-Origin", "*");
+        res.header("Access-Control-Allow-Headers",
+            "Origin, X-Requested-With, Content-Type, AcceptContent-Type, " +
+            "Content-Range, Content-Disposition, Content-Description");
+
+        if (req.method == "OPTIONS") {
+            res.status(200).end();
+        }
+        else {
+            next();
+        }
+    });
+
+
     router(app);
 };
 
