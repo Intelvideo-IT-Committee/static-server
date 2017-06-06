@@ -7,7 +7,7 @@
 <script>
 $(function () {
     $('#imgupload').fileupload({
-        url: "//localhost:8080/upload",
+        url: "/upload",
         dataType: 'json',
         done: function (e, data) {
             console.log("done");

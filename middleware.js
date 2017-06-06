@@ -12,6 +12,13 @@ var configureServer = function (app) {
     // 'views' is not views folder but templates, so fuck my life
     app.set('views', './templates/'); // so root folder for templates is set here
 
+    if(process.env.PRINT_REQUESTS == "true") {
+        app.use("*", (req, res, next) => {
+            console.log(req.method + ": " + req.baseUrl);
+            next();
+        });
+    }
+
     // setting up static files
     app.use('/st', express.static(process.env.STATIC_DIR));
 
